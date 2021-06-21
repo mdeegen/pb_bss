@@ -28,6 +28,8 @@ jobs:
     - name: Install python dependencies
       run: |
         #python -m pip install --upgrade pip
+        pip uninstall scikit-learn
+        pip install scikit-learn==0.19.2
         pip install numpy scipy Cython
         pip install -e .[all]
         pip install flake8 pytest pytest-cov codecov pytest-rerunfailures
