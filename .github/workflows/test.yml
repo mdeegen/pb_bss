@@ -22,7 +22,7 @@ jobs:
         python-version: ${{ matrix.python-version }}
     - name: Install linux dependencies
       run: |
-        #trap 'echo -e "$ $BASH_COMMAND"' DEBUG
+        trap 'echo -e "$ $BASH_COMMAND"' DEBUG
         sudo apt-get update
         sudo apt-get install libsndfile1 sox    
         pip install numpy scipy Cython
